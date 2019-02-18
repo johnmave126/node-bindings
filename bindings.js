@@ -198,10 +198,9 @@ exports.getRoot = function getRoot(file) {
       dir = process.cwd();
     }
     if (
-      exists(join(dir, 'package.json')) ||
-      exists(join(dir, 'node_modules'))
+      exists(join(dir, 'package.json'))
     ) {
-      // Found the 'package.json' file or 'node_modules' dir; we're done
+      // Found the 'package.json' file; we're done
       return dir;
     }
     if (prev === dir) {
